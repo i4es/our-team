@@ -1,0 +1,274 @@
+@import 'normalize.css';
+@import 'layout';
+$primary-color: #ffcc00;
+$text-color: #333333;
+$box-position: relative;
+@mixin main-font {
+	font-family: Raleway, sans-serif;
+	font-weight: 500;
+}
+@mixin title-font {
+	font-family: Roboto, sans-serif;
+	font-weight: 900;
+}
+@mixin separator-style {
+	display: inline-block;
+	position: absolute;
+	background-color: $primary-color;
+}
+@mixin box-style {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+.ba-container {
+	width: 1140px;
+}
+.ba-image {
+	max-width: 100%;
+	height: auto;
+	&--highlighted {
+		border: 1px solid $primary-color;
+	}
+}
+.ba-our-team {
+	width: 1920px;
+	height: 990px;
+	@include main-font;
+	font-size: 14px;
+	line-height: 1.71;
+	color: $text-color;
+}
+// header part
+.ba-header { 
+	text-align: center;
+	text-transform: uppercase;
+	.ba-sub-title {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.5;
+		margin: 0 auto;
+		letter-spacing: 0.02em;
+		padding-top: 105px;
+	}
+	.ba-site-title {
+		@include title-font;
+		color: $primary-color;
+		font-size: 60px;
+		margin-top: -15px;
+	}
+}
+.ba-separator {
+	width: 100%;
+	height: 2px;
+	right: 10px;
+	bottom: 25px;
+	position: relative;
+	&__image {
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+	}
+	&__left {
+		@include separator-style;
+		left: 38%;
+		top: 10px;
+		width: 210px;
+		height: 1px;
+	}
+	&__right {
+		@include separator-style;
+		top: 10px;
+		right: 37.88888%;
+		width: 210px;
+		height: 1px;
+	}
+	&__center {
+		@include separator-style;
+		top: 56px;
+		left: 50.3%;
+		width: 1px;
+		height: 560px;
+	}
+}
+// Main part
+.ba-content {
+	position: relative;
+	.ba-arrow {
+	display: inline-block;
+	position: absolute;
+	border: none;
+	background: #FFF;
+	font-size: 40px;
+	font-weight: 700;
+	color: $primary-color;
+	&--left {
+		position: absolute;
+		left: 395px;
+		bottom: 320px;
+	}
+	&--right {
+		position: absolute;
+		right: 395px;
+		bottom: 320px;
+	}
+}
+	.ba-slider {
+		display: block;
+		width: 100px;
+		height: 25px;
+		margin: 0 auto;
+		margin-top: 90px;
+		padding-right: 10px;
+		padding-left: 26px;
+			&__item {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				border: 2px solid $primary-color;
+				background-color: $primary-color;
+				border-radius: 50%;
+				transition: all 0.5s ease-in;
+			&:hover {
+				cursor: pointer;
+				background-color: #fff;
+				transition: all 0.5s ease-in;
+			}
+		}
+	}
+}
+// member part 
+.ba-member {
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	padding-top: 20px;
+	@include main-font;
+	font-weight: 600;
+	.ba-image {
+		padding: 0;
+		width: 389px;
+		height: 390px;
+	}
+	&__photo {
+		padding-right: 40px;
+		padding-top: 100px;
+	}
+	&__boxlt {
+		@include box-style;
+		top: 105px;
+		left: 67px;
+		border-top: 1px solid $primary-color;
+		border-left: 1px solid $primary-color;
+	}
+	&__boxlb {
+		@include box-style;
+		bottom: 15px;
+		left: 67px;
+		border-bottom: 1px solid $primary-color;
+		border-left: 1px solid $primary-color;
+	}
+	&__boxrt {
+		@include box-style;
+		left: 385px;
+		top: 105px;
+		border-right: 1px solid $primary-color;
+		border-top: 1px solid $primary-color;
+	}
+	&__boxrb {
+		@include box-style;
+		bottom: 15px;
+		left: 385px;
+		border-right: 1px solid $primary-color;
+		border-bottom: 1px solid $primary-color;
+	}
+	&__info {
+		padding-top: 60px;
+	}
+	&__name {
+		@include title-font;
+		font-size: 36px;
+		line-height: 1.5;
+		letter-spacing: 0.02em;
+		text-align: center;
+		padding-top: 5px;
+		padding-left: 25px;
+		color: #666;
+	}
+	&__name {
+		font-size: 36px;
+		padding-right: 10px;
+	}
+	&__position {
+		font-size: 24px;
+		@include main-font;
+		color: $text-color;
+		text-align: center;
+		padding-left: 17px;
+		padding-top: 10px;
+	}
+	&__topline {
+		position: absolute;
+		width: 100px;
+		height: 1px;
+		background-color: $primary-color;
+		top: 186px;
+		right: 240px;
+	}
+	.ba-btn {
+		display: block;
+		margin-top: 50px;
+		margin-left: 215px;
+		width: 120px;
+		height: 25px;
+		letter-spacing: 0;
+		padding-left: 5px;
+		border: 1px solid $primary-color;
+		transition: all 0.5s ease-in;
+		&:hover {
+			background-color: $primary-color;
+			transition: all 0.5s ease-in;
+		}
+	}
+	.ba-view-more {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #666;
+		font-family: 'Open-sans', sans-serif;
+		font-weight: 700;
+	}
+	&__content {
+		padding-left: 70px;
+		padding-right: 45px;
+	}
+}
+.ba-socials {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	&__item {
+		display: inline-block;	
+		width: 30px;
+		height: 30px;
+		margin-right: 2px;
+		border: 2px solid #CCC;
+		border-radius: 50%;
+		transition: all 0.5s ease-in;
+		&:hover {
+			cursor: pointer;
+			border: 2px solid $primary-color;
+			color: $primary-color;
+			transition: all 0.5s ease-in;
+		}
+	}
+	&__link {
+		color: #CCC;
+		text-align: center;
+	}
+	&__icon {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+}
